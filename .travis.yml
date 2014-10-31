@@ -1,7 +1,14 @@
 language: java
 jdk:
- - openjdk7
- - oraclejdk7
+- openjdk7
+- oraclejdk7
 script:
- - ./gradlew check
- - ./gradlew seleniumXvfb
+- "./gradlew check"
+- "./gradlew seleniumXvfb"
+deploy:
+  provider: heroku
+  api_key:
+    secure: RiTNEuNdW3nkUZUmfrN5Cwd9j+hbLwopXk35I9CwcyBvqt69EsbfxAUVyEp23T4RCy+qt6Jbp/XjOh7hg49zRKeNv469W4NAcNKXr7RQw8fxRTSLhAmXAv1TBi7InjwSstYafTqjYX4z1DPo3XlfrA2rWTJKgzJnhhYPEMxS87A=
+  app: hugbggj
+  on:
+    repo: GudjonGeir/sparkIt
